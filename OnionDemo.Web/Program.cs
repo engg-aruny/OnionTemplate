@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-var connectionString = builder.Configuration.GetConnectionString("Portfolio");
+var connectionString = builder.Configuration.GetConnectionString("pingongDB");
 
 // Add services to the container.
 builder.Services.AddControllers()
