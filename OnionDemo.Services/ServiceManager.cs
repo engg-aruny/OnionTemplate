@@ -4,14 +4,14 @@ namespace OnionDemo.Services
 {
     public sealed class ServiceManager : IServiceManager
     {
-        private readonly Lazy<IPingPongService> _lazyPingPongService;
+        private readonly IPingPongService _pingPongService;
 
-        public ServiceManager(IRepositoryManager repositoryManager)
+        public ServiceManager(IPingPongService pingPongService)
         {
-            _lazyPingPongService = new Lazy<IPingPongService>(() => new PingPongService(repositoryManager));
+            _pingPongService = pingPongService;
         }
 
-        public IPingPongService PingPongService => _lazyPingPongService.Value;
+        public IPingPongService PingPongService => _pingPongService;
     }
 
     public interface IServiceManager

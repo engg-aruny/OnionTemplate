@@ -21,6 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionDemo.Persistance", "On
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionDemo.Presentation", "OnionDemo.Presentation\OnionDemo.Presentation.csproj", "{CECA9C50-DB83-40B5-B204-4C4115B634A3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBScript", "DBScript", "{CB2F7418-BD09-4291-A5E1-3CC463DEFB6B}"
+	ProjectSection(SolutionItems) = preProject
+		GenerateSchema.sql = GenerateSchema.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

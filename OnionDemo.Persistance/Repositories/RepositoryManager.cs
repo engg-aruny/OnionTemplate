@@ -4,17 +4,17 @@ namespace OnionDemo.Persistance.Repositories
 {
     public sealed class RepositoryManager : IRepositoryManager
     {
-        private readonly Lazy<IPingPongRepository> _lazyPingPongRepository;
-        private readonly Lazy<IUnitOfWork> _lazyUnitOfWork;
+        private readonly IPingPongRepository _pingPongRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public RepositoryManager(RepositoryDbContext dbContext)
+        public RepositoryManager(IPingPongRepository pingPongRepository, IUnitOfWork unitOfWork)
         {
-            _lazyPingPongRepository = new Lazy<IPingPongRepository>(() => new PingPongRepository(dbContext));
-            _lazyUnitOfWork = new Lazy<IUnitOfWork>(() => new UnitOfWork(dbContext));
+            _pingPongRepository = pingPongRepository;
+            _unitOfWork = unitOfWork;
         }
 
-        public IPingPongRepository PingPongRepository => _lazyPingPongRepository.Value;
+        public IPingPongRepository PingPongRepository => _pingPongRepository;
 
-        public IUnitOfWork UnitOfWork => _lazyUnitOfWork.Value;
+        public IUnitOfWork UnitOfWork => _unitOfWork;
     }
 }

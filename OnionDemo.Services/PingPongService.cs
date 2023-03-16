@@ -11,7 +11,7 @@ namespace OnionDemo.Services
         public async Task<IEnumerable<PingPong>> GetAllPingPongAsync(CancellationToken cancellationToken)
         {
             var pongPongs = await _repositoryManager.PingPongRepository.GetAllPingPongAsync(cancellationToken);
-            throw new NotImplementedException();
+            return pongPongs;
         }
     }
 

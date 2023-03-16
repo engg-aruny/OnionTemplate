@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/OnionDemo.Web/ClientApp/.angular/cache/14.0.3/babel-webpack
+/OnionDemo.Web/ClientApp/.angular/cache/14.0.3/angular-webpack/2e8b0789cdf17e2db129ce9e0ab877a479d7a06c
