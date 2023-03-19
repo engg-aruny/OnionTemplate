@@ -3,17 +3,19 @@ using Autofac.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using OnionDemo.Persistance;
-using OnionDemo.Presentation;
+using OnionDemo.Services;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-var connectionString = builder.Configuration.GetConnectionString("pingongDB");
+var connectionString = builder.Configuration.GetConnectionString("PingPongDB");
+
+var presentationAssembly = Assembly.Load("OnionDemo.Presentation");
 
 // Add services to the container.
-builder.Services.AddControllers()
-               .AddApplicationPart(typeof(OnionDemo.Presentation.AssemblyReference).Assembly);
+builder.Services.AddControllers().AddApplicationPart(presentationAssembly);
 
 builder.Services.AddSwaggerGen(c =>
                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Web", Version = "v1" }));
@@ -29,7 +31,7 @@ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(builder =>
 {
     builder.RegisterModule(new PersistanceAutofacModule());
-    builder.RegisterModule(new PresentationAutofacModule());
+    builder.RegisterModule(new ServiceAutofacModule());
 });
 
 var app = builder.Build();

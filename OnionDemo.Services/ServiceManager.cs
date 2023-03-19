@@ -1,4 +1,4 @@
-﻿using OnionDemo.Domain.Repositories;
+﻿using OnionDemo.Domain.Services.Abstractions;
 
 namespace OnionDemo.Services
 {
@@ -12,10 +12,5 @@ namespace OnionDemo.Services
         }
 
         public IPingPongService PingPongService => _pingPongService;
-    }
-
-    public interface IServiceManager
-    {
-        IPingPongService PingPongService { get; }
     }
 }

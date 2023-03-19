@@ -1,4 +1,4 @@
-create database pingongDB
+create database PingPongDB
 
 GO
 

@@ -7,13 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="6.5.0" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OnionDemo.Services\OnionDemo.Services.csproj" />
+    <ProjectReference Include="..\OnionDemo.Domain\OnionDemo.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using OnionDemo.Services;
+using OnionDemo.Domain.Services.Abstractions;
 
 namespace OnionDemo.Presentation.Controllers
 {

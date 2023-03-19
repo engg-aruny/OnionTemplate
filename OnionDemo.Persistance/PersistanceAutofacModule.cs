@@ -3,7 +3,7 @@ using Autofac;
 using OnionDemo.Domain.Repositories;
 using OnionDemo.Persistance.Repositories;
 
-namespace OnionDemo.Presentation
+namespace OnionDemo.Persistance
 {
     public class PersistanceAutofacModule : Module
     {

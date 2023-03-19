@@ -1,5 +1,7 @@
-﻿using OnionDemo.Domain.Entities;
+﻿
+using OnionDemo.Domain.Entities;
 using OnionDemo.Domain.Repositories;
+using OnionDemo.Domain.Services.Abstractions;
 
 namespace OnionDemo.Services
 {
@@ -13,11 +15,5 @@ namespace OnionDemo.Services
             var pongPongs = await _repositoryManager.PingPongRepository.GetAllPingPongAsync(cancellationToken);
             return pongPongs;
         }
-    }
-
-    //We can seperate it out in Services.Abstractions
-    public interface IPingPongService
-    {
-        Task<IEnumerable<PingPong>> GetAllPingPongAsync(CancellationToken cancellationToken);
     }
 }

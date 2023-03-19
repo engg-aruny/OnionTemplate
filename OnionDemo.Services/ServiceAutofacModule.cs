@@ -1,9 +1,9 @@
 ﻿using Autofac;
-using OnionDemo.Services;
+using OnionDemo.Domain.Services.Abstractions;
 
-namespace OnionDemo.Presentation
+namespace OnionDemo.Services
 {
-    public class PresentationAutofacModule : Module
+    public class ServiceAutofacModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
