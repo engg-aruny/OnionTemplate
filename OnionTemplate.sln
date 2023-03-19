@@ -26,9 +26,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBScript", "DBScript", "{CB
 		GenerateSchema.sql = GenerateSchema.sql
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionDemo.Core.Rules.Tests", "OnionDemo.Core.Rules.Tests\OnionDemo.Core.Rules.Tests.csproj", "{1E46E959-081D-489E-9568-BED25EAB41E1}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ArchitectureEnforcementTest", "ArchitectureEnforcementTest", "{561A2F56-0F9D-4FE5-B064-61D471456053}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionDemo.Core.Policies.Tests", "OnionDemo.Core.Policies.Tests\OnionDemo.Core.Policies.Tests.csproj", "{C5FC4805-A524-4554-9D26-A690EA258EE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,10 +60,10 @@ Global
 		{CECA9C50-DB83-40B5-B204-4C4115B634A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CECA9C50-DB83-40B5-B204-4C4115B634A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CECA9C50-DB83-40B5-B204-4C4115B634A3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1E46E959-081D-489E-9568-BED25EAB41E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E46E959-081D-489E-9568-BED25EAB41E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E46E959-081D-489E-9568-BED25EAB41E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E46E959-081D-489E-9568-BED25EAB41E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5FC4805-A524-4554-9D26-A690EA258EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5FC4805-A524-4554-9D26-A690EA258EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5FC4805-A524-4554-9D26-A690EA258EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5FC4805-A524-4554-9D26-A690EA258EE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,7 +75,7 @@ Global
 		{9ECD5166-C187-4914-B260-1BFA1EE656E6} = {9C917F19-FA4F-41FD-8A8B-C70F8C263F5B}
 		{EFC1A45D-2DD7-4DBB-A336-767F99F32261} = {50D2F29E-593E-4A4B-A2CF-3513BC39A0D9}
 		{CECA9C50-DB83-40B5-B204-4C4115B634A3} = {50D2F29E-593E-4A4B-A2CF-3513BC39A0D9}
-		{1E46E959-081D-489E-9568-BED25EAB41E1} = {561A2F56-0F9D-4FE5-B064-61D471456053}
+		{C5FC4805-A524-4554-9D26-A690EA258EE5} = {561A2F56-0F9D-4FE5-B064-61D471456053}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4ABB6E44-7F86-463D-BE74-7595CF01A736}

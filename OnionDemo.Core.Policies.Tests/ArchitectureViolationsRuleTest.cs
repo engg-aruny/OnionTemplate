@@ -10,7 +10,7 @@ using Autofac;
 using OnionDemo.Persistance;
 using OnionDemo.Services;
 
-namespace OnionDemo.Core.Rules.Tests
+namespace OnionDemo.Core.Policies.Tests
 {
     public class ArchitectureViolationsRuleTest
     {
