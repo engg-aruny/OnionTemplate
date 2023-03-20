@@ -75,7 +75,7 @@ namespace OnionDemo.Core.Policies.Tests
             layerdRule.Check(Architecture);
 
 
-            //A domain Service layer reference must have depedent from domain layer
+            //The Presentation Layer should have reference to domain layer
             layerdRule = Types().That().Are(PresentationLayer)
                 .Should().DependOnAny(DomainModelLayer);
             
