@@ -10,9 +10,9 @@ namespace OnionDemo.Persistance.Configurations
         {
             builder.HasKey(ping => ping.Id);
 
-            builder.Property(ping => ping.Name).HasMaxLength(100);
+            builder.Property(ping => ping.Model).HasMaxLength(100);
 
-            builder.Property(ping => ping.CreatedDate).IsRequired();
+            builder.Property(ping => ping.ManufactureDate).IsRequired();
         }
     }
 }

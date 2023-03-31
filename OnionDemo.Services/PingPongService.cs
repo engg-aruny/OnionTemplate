@@ -15,5 +15,10 @@ namespace OnionDemo.Services
             var pongPongs = await _repositoryManager.PingPongRepository.GetAllPingPongAsync(cancellationToken);
             return pongPongs;
         }
+
+        public async Task Insert(CancellationToken cancellationToken)
+        {
+            await _repositoryManager.PingPongRepository.Insert(cancellationToken);
+        }
     }
 }

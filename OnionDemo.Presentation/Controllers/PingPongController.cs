@@ -18,5 +18,13 @@ namespace OnionDemo.Presentation.Controllers
 
             return Ok(pingPongDto);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Insert(CancellationToken cancellationToken)
+        {
+            await _serviceManager.PingPongService.Insert(cancellationToken);
+
+            return Ok();
+        }
     }
 }

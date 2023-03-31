@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OnionDemo.Domain.Entities
 {
@@ -10,12 +6,14 @@ namespace OnionDemo.Domain.Entities
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public string Model { get; set; }
 
-        public DateTimeOffset CreatedDate { get; set; }
+        public DateTimeOffset ManufactureDate { get; set; }
 
-        public DateTimeOffset? ModifiedDate { get; set; }
 
-        public DateTimeOffset? PublishedDate { get; set; }
+        [ForeignKey(nameof(ManufacturerId))]
+        public int ManufacturerId { get; set; }
+
+        public Manufacturer Manufacturer { get; set; }
     }
 }

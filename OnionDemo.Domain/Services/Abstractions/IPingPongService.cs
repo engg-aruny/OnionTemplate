@@ -5,5 +5,7 @@ namespace OnionDemo.Domain.Services.Abstractions
     public interface IPingPongService
     {
         Task<IEnumerable<PingPong>> GetAllPingPongAsync(CancellationToken cancellationToken);
+
+        Task Insert(CancellationToken cancellationToken);
     }
 }

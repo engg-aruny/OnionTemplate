@@ -12,6 +12,8 @@ namespace OnionDemo.Persistance
 
         public DbSet<PingPong> PingPong { get; set; }
 
+        public DbSet<Manufacturer> Manufacturers { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder) =>
            modelBuilder.ApplyConfigurationsFromAssembly(typeof(RepositoryDbContext).Assembly);
     }
